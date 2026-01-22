@@ -46,7 +46,7 @@ div[class*=i]{
 }
 
 /*
-    class 속성값이 div-class인 애들 중 name 속성값에 name3가 포함되어 있는 요소 서택
+    class 속성값이 div-class인 애들 중 name 속성값에 name3가 포함되어 있는 요소 선택
     선택후 스타일 부여는 자유
 */
 .div-class[name~=name3]{

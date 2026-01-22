@@ -76,3 +76,42 @@
     display : block;
     background-color: blue;
 }
+
+#container-3{
+    display : inline-block;
+    border : 5px solid red;
+    width : 400px;
+    height : 200px;
+}
+
+#container-3 > div:first-of-type{
+    display : inline-block;
+    width : 50%;
+    height : 100%;
+    background-color: pink; 
+}
+#container-3 > div:last-of-type{
+    width : 50%;
+    height : 100%;
+    display : inline-block;
+    background-color: skyblue;
+}
+
+.div-4{
+    border : 3px solid black;
+    height: 100px;
+}
+
+#test4{
+    background-origin: deeppink;
+    
+    /* display : none;
+    요소는 존재하지만 화면에 보이지 않는다
+    + 영역도 차지하지 않는다. */
+
+    /* opacity:0; 요소의 가시성을 관리
+    visibility:hidden -> opacity:0 */
+
+    visibility:hidden;
+
+}
