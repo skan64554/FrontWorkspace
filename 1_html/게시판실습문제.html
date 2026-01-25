@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>KH 게시판 - 실습문제</h1>
+<hr>
+<h3>메뉴</h3>
+<p>
+    학습 내용 클릭시 작성한 html 페이저로 이동되도록 구현한다.
+</p>
+
+<ol type="A">
+    <li>Home</li>
+    <li>KH 게시판</li>
+    <li>학습내용
+        <ol type="I" reversed>
+            <li><a href="8_하이퍼링크관련태그.html">하이퍼링크 관련 태그</a></li>
+            <li><a href="7_영역관련태그.html">영역 관련 태그</a></li>
+            <li><a href="6_입력양식및폼관련태그.html">입력양식 및 폼 관련 태그</a></li>
+            <li><a href="5_이미지및멀티미디어관련태그.html">이미지 및 멀티미디어 관련 태그</a></li>
+            <li><a href="4_표관련태그.html">표 관련 태그</a></li>
+            <li><a href="3_목록관련태그.html">목록 관련 태그</a></li>
+            <li><a href="2_글자관련태그.html">글자 관련 태그</a></li>
+        </ol>
+    </li>
+</ol>
+
+<hr>
+
+
+<h3>KH 게시판</h3>
+<p>
+    4번 게시글 제목 클릭시 4번 게시글 내용으로 이동 되도록 구현한다. <br>
+    등록하기 버튼 클릭시 게시글 등록으로 이동하도록 구현한다.
+</p>
+
+
+    <table border="1">
+      
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th width="90">작성자</th>
+            <th width="90">조회수</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>오늘부터 다이어트 1일차 들어갑니다</td>
+            <td>mkm</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>html 재밌죠?</td>
+            <td>mkm</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>새해목표 : sqld따기</td>
+            <td>조용우</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td><a href="4_표관련태그.html">국도레시</a></td>
+            <td>김현민</td>
+            <td>100</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>논란치킨</td>
+            <td>mkm</td>
+            <td>1</td>
+        </tr>
+
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <th height="30" width="90" colspan="4">
+                <input type="button" value="등록">
+            </th>
+        </tr>
+
+        </tfoot>
+    </table>
+
+<hr>
+<br><br>
+
+<h3>4번 게시글 내용</h3>
+<p>
+    행병합, 열병합을 적절히 활용하여 아래 테이블데이터를 만든다
+</p>
+
+<table border="1">
+      
+       
+        <tbody>
+        <tr>
+            <th>번호</th>
+            <td colspan="4">4</td>
+        </tr>
+
+        <tr>
+            <th>제목</th>
+            <td colspan="4">아... html 재미없다</td>
+        </tr>
+
+        <tr>
+            <th>작성자</th>
+            <td  colspan="2">임세윤</td>
+            <th width="50">조회수</th>
+            <td width="200">100</td>
+        </tr>
+
+        <tr>
+            <th colspan="1" rowspan="2" width="100" height="200">내용</th>
+            <td colspan="2" rowspan="2" >html 공부를 시작해봤는데 생각보다 어렵고 <s>재미가 없습니다...
+            </s>재밌게 공부하는 꿀팁 좀 알려주십쇼.</td>
+            <th colspan="2" rowspan="1">첨부 이미지 (200 x 200)</th>
+        </tr>
+        <tr>
+             <td colspan="2" rowspan="1">
+                <img src="../resources/image/bono.jpg" width="200" height="200">
+            </td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        
+
+        </tfoot>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3>게시글 등록</h3>
+
+    <p>
+        제목, 내용은 등록시 반드시 값을 받도록 하고, 값을 전송할 서버의 주소는 insert,<br>
+        전송방식은 post로 설정한다 <br>
+        제목과 내용, 첨부파일은 서버로 전송시 title, content, upload라는 이름으로 전송한다
+    </p>
+
+    <form action="insert" method="post">
+            <fieldset>
+                <legend>글작성</legend>
+                    <fieldset>
+                        <legend>제목</legend>
+                        <input type="text" name="title" size="80" id="title">
+                    </fieldset>
+                     
+               
+                    <fieldset>
+                        <legend>내용</legend>
+                        <textarea name="content" cols="70", rows="10"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>첨부파일</legend>                                 
+                        <input id="file-upload" type="file" />
+                    </fieldset>
+
+                    <input type="submit" value="등록하기">
+            </fieldset>
+        </form>
+    
+
+    
+
+    <br>
+
+</body>
+<foot>
+<p>
+   (주) 2024 KH
+</p>
+</foot>
+
+</html>
