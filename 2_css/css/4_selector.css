@@ -1,4 +1,5 @@
 #test1 > p:only-child{
+<<<<<<< HEAD
     background-color : steelblue;
 }
 
@@ -31,6 +32,38 @@
 /*
     여러 클래스를 가진 요소 선택
 */
+=======
+    background-color: steelblue;
+}
+
+#test2 > p:only-of-type{
+    background-color: crimson;
+}
+
+/* 
+    :empty
+*/
+#test3 > p:empty{
+    height: 30px;
+    background-color: lime;
+}
+
+/* 여러선택자 동시 선택 */
+#test4-1 , #test4-2 , .test4-3{
+    background-color: yellow;
+}
+
+/* 특정 요소 내부의 클래스 선택 */
+#test5-1 li.c5{
+    background-color: aquamarine;
+} 
+
+#test5-1 li.c5{
+    color: red;
+} 
+
+/* 여러클래스를 가진 요소 선택 */
+>>>>>>> 3d3dd4b62204ed60fa98cbc653967d769f9282fd
 .c6.test6{
     background-color: red;
 }
