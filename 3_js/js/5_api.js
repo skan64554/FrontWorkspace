@@ -126,7 +126,77 @@ test7.onclick = function(){
         ex) 123, -123, 1.1, "문자", "문", new Date()
             [],{}또한 주소값이 있어서 true
     */
+    console.log(Boolean(123)); // true
+    console.log(Boolean(-500)); // true
+    console.log(Boolean(0)); // false
+
+    console.log(Boolean("abc")); // true
+    console.log(Boolean("")); // false
+
+    console.log(Boolean(undefined)); // false
+    console.log(Boolean(null)); // false
+
+    console.log(Boolean([]+"")); // true(주소값) ,+"" -> false
+
+    console.log(Boolean({})); // true(주소값)
+
+    console.log(Boolean(NaN)); // false
+
+    function fn(){}
+    console.log(Boolean(fn)); //true
+
+    console.log("0" == 0); // true
+    console.log([] == 0); //true
+    // Number('') -> 0
+    console.log([] == "0"); // true가 아닌 false
+    // A==B, B==C, A!=C???
 }
 
+test8.onclick = function(){
 
+    /*
+        일반 동등비교 연산자
+        == , !=
+        왼쪽 오른쪽 타입이 서로 다르다면 "자동형변환" 후 비교 수행
+
+        엄격 동등비교 연산자
+        === , !==
+        왼쪽 오른쪽 타입이 서로 다르다면 바로 false 반환
+        즉, 두 값간의 자료형검사 또한 수행
+    */
+
+    console.log(3 == "3"); // true
+    console.log(3 != "3"); // false
+
+    console.log(3 === "3"); // false -> 자료형이 달라서 false
+    console.log(3 === 3); // true 
+
+    console.log(3 !== "3"); // true
+    console.log(3 === Number("3")); // true
+
+    console.log(null == undefined); // true
+    console.log(null === undefined); // false 자료형이 다름
+    // undefined라는 자료형 , null은 객체 취급
+    //console.log([] === 0); // false 애초에 컴파일 에러
+}
+
+test9.onclick = function(){
+    var num = prompt("정수를 입력하세요.")
+
+    // 입력한 값이 홀수인지 짝수인지 출력
+
+    // if(num % 2 == 0){
+    //     alert("짝수");
+    // }else{
+    //     alert("홀수");
+    // }
+
+    // 짧은 조건문
+    // a(조건식) && b(실행문) -> a가 참인 경우 b 실행
+    // a(조건식) || b(실행문) -> a가 거짓인 경우 b 실행
+    // num % 2 == 0 && alert("짝수");
+    // num % 2 == 1 && alert("홀수");
+
+    num % 2 == 0 ? alert("짝수") : alert("홀수");
+}
 
