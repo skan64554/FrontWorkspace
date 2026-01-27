@@ -32,6 +32,25 @@ innerH.onclick = function(){
     */
    var str = "<h1>치킨먹고싶다</h1>";
 
+   //데이터 가공처리
    wrapper.innerHTML = str; // setter 방식
+   console.log(wrapper.innerHTML); //getter 방식
+};
 
-}
+innerT.onclick = function(){
+    /*
+        innerText/textContent : content영역안의 "문자"요소만을 가져오는 속성
+    */
+    var str = "<h1>배고파요...</h1>"
+    //  wrapper.innerText = str;
+    wrapper.textContent = str;
+    console.log(wrapper.textContent);
+};
+
+outerH.onclick = function(){
+    //outerHTML : 선택된 요소의 내부 CONTENT갑과 + 선택된 요소값을 합쳐서
+    // 반환(getter)하거나 저장(setter)하는 속성
+
+    console.log(wrapper.outerHTML);
+    wrapper.outerHTML = "<mark>붕어빵먹고싶어요.</mark>"
+};

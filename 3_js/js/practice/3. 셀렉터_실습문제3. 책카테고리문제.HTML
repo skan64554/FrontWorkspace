@@ -100,23 +100,70 @@
             체크 박스 선택 후 카테고리 선택을 누르면 하단 네모에 선택한 카테고리 출력.
         */
         function printCategory(){
+            area.innerHTML = ""; // 내용 초기화
+
+            //var area = document.getElementById("area");
+            var categories = document.querySelectorAll("input[name=category]:checked");
             
+            for(let i = 0; i < categories.length; i++){
+                area.innerHTML += categories[i].value+" ";
+            }
         }
 
         /* 2번기능 (전체선택기능).
          전체선택 체크박스 선택시 모든 카테고리가 선택되며, 선택 해제서 모든 체크박스가 선택 해제. 
         */
         function selectAll(){
+            var categories = document.getElementsByName("category");
+
+            if(document.getElementById("selectAll").checked){
+             categories.forEach((ca) => {
+					ca.checked = true;
+            });
+            }else{ 
+                categories.forEach((ca) => {
+					ca.checked = false;
+            });
+            }
             
+            /*
+                답안, 파라미터 X
+                var checked = document.querySelector("#selectAll").checked;
+                var categories = document.querySelectorAll("input[name=category]");
+
+                for(let i = 0; i < categories.length; i++){
+                    categorys[i].checked = checked;
+                }
+            */
         }
 
         /* 3번기능 (카테고리 체크박스 선택시 전체선택 체크박스 제어 기능)
            카테고리 체크박스를 전부 선택하면 전체선택 체크박스가 선택되고 
            하나라도 선택이 되어있지 않으면 전체선택 체크박스는 선택 해제
         */
-        function checkCategory(checkbox){
-           
+       function checkCategory(checkbox) {
+        var selectAllBtn = document.getElementById("selectAll"); // 전체선택 버튼 선택
+        var categories = document.getElementsByName("category"); // 모든 카테고리 체크박스
+        
+        // 현재 체크된 카테고리 체크박스의 개수 구하기
+        var checkedCount = document.querySelectorAll('input[name="category"]:checked').length;
+
+        // 전체 개수와 체크된 개수가 같으면 전체선택 체크, 다르면 해제
+        if (categories.length === checkedCount) {
+            selectAllBtn.checked = true;
+        } else {
+            selectAllBtn.checked = false;
         }
+
+        /*
+            // 전체선택 체크박스
+            var selectAll = document.querySelector("#selectAll");
+            var checkboxes = document.querySelectorAll("input[name=category]");
+            var checkedboxes = document.querySelectorAll("input[name=category]:checked");
+
+            slectAll.checked = (checkboxes.length == checkedboxes.length); // true or false
+        */
+}
     </script>
 </body>
 </html>
