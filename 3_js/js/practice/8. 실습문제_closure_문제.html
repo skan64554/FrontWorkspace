@@ -17,10 +17,20 @@
 	<button onclick="addFunc();">실행</button>
 	<script>
 		function mkAddFunc (){
+    var sum = 0; // 클로저 변수
 
-		} 
+    return function(){
+        var value = Number(myadder.value);
 
-		var addFunc = mkAddFunc();
+        // 숫자가 아니면 무시
+        if (isNaN(value)) return;
+
+        sum += value;
+        alert(sum);
+    };
+}
+
+var addFunc = mkAddFunc();;
 	</script>
 </body>
 </html>

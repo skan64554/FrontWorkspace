@@ -1,5 +1,6 @@
 test1.onclick = function(){
 
+    
     /*
         Object
          - {속성명 : 속성값}으로 구성된 요소를 관리하는 객체
