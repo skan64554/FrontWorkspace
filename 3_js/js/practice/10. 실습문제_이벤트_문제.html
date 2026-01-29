@@ -38,15 +38,36 @@
     document.querySelector("#btn-generate").onclick = function(){
 
       // 1 버튼 객체 생성
-      var btnArr ={
-        { text : "네이버" , url "https://www.naver.com"},
-        { text : "구글" , url "https://www.google.com"},
-        { text : "kH" , url "https://www.iei.or.kr"},
-        { text : "와삼" , url "https://www.w3schools.com"},
-      }
+      var btnArr =[
+        { text : "네이버" , url :"https://www.naver.com"},
+        { text : "구글" , url :"https://www.google.com"},
+        { text : "kH" , url :"https://www.iei.or.kr"},
+        { text : "와삼" , url :"https://www.w3schools.com"},
+      ]
 
       var wrapper = document.querySelector(".btn-wrapper");
-    }
+
+      // 기존 버튼 제거
+      wrapper.innerHTML = "";
+
+      // 2. 배열 순회
+      btnArr.forEach(function (obj){
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.innerText = obj.text;
+        btn.dataset.url = obj.url;
+
+        // 3. 클릭 이벤트
+        btn.onclick = function(){
+          location.href = this.dataset.url;
+        };
+        wrapper.appendChild(btn);
+        wrapper.appendChild(document.createTextNode(" "));
+        });
+
+       }
+    
+      
   </script>
 
 </body>
