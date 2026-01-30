@@ -35,7 +35,9 @@
     <button type="button" data-url='https://www.w3schools.com'>와삼</button>
   </div>
   <script>
-    document.querySelector("#btn-generate").onclick = function(){
+      document.querySelector("#btn-generate").onclick = function(){
+
+      // var btns = document.querySelectorAll('.btn-wrapper > button');
 
       // 1 버튼 객체 생성
       var btnArr =[
@@ -56,6 +58,20 @@
         btn.type = "button";
         btn.innerText = obj.text;
         btn.dataset.url = obj.url;
+
+      /*
+        for(var button of btns){
+          var btn = document.createElement("button"); // <button></button>
+          btn.innerText = button.innerText;
+          btn.dataset.rul = button.dataset.url;
+
+          btn.onclick = function(e){
+            location.assign(this.dataset.url)
+          }
+
+          document.querySelector(".btn-wrapper").appendChild(btn);
+        }
+      */
 
         // 3. 클릭 이벤트
         btn.onclick = function(){
