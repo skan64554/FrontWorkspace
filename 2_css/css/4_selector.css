@@ -1,5 +1,4 @@
 #test1 > p:only-child{
-<<<<<<< HEAD
     background-color : steelblue;
 }
 
@@ -32,7 +31,6 @@
 /*
     여러 클래스를 가진 요소 선택
 */
-=======
     background-color: steelblue;
 }
 
@@ -63,7 +61,6 @@
 } 
 
 /* 여러클래스를 가진 요소 선택 */
->>>>>>> 3d3dd4b62204ed60fa98cbc653967d769f9282fd
 .c6.test6{
     background-color: red;
 }

@@ -1,35 +1,16 @@
-<<<<<<< HEAD
-.area1{
-    background-color:red;
-}
-.area2{
-    background-color:orange;
-}
-.area3{
-    background-color: yellow;
-}
-=======
 .area1{ background-color: red;}
 .area2{background-color: orange;}
 .area3{background-color: yellow;}
->>>>>>> 3d3dd4b62204ed60fa98cbc653967d769f9282fd
 .area4{background-color: green;}
 .area5{background-color: blue;}
 
 .block{
     border : 1px solid black;
     width : 150px;
-<<<<<<< HEAD
-    height : 150px;
-    color : white;
-
-    display:block;
-=======
     height: 150px;
     color : white;
 
     display: block;
->>>>>>> 3d3dd4b62204ed60fa98cbc653967d769f9282fd
 }
 
 .inline{
@@ -39,81 +20,6 @@
 .inline-block{
     display : inline-block;
 }
-<<<<<<< HEAD
-#container-1{
-    display : block;
-    border : 2px solid black;
-    width : 323px;
-    height : 500px;
-}
-
-#container-1 > div:first-of-type{
-  
-    width : 100%;
-    height : 30%;
-    display : block;
-    background-color: red; 
-}
-#container-1 > div:last-of-type{
-  
-    width : 100%;
-    height : 70%;
-    display : block;
-    background-color: blue;
-}
-
-#container-2{
-    display : block;
-    border : 2px solid black;
-    width : 323px;
-    height : 500px;
-}
-
-#container-2 > div:first-of-type{
-  
-    width : 100%;
-    height : 20%;
-    display : block;
-    background-color: green; 
-}
-#container-2 > div:nth-of-type(2){
-  
-    width : 100%;
-    height : 30%;
-    display : block;
-    background-color: red; 
-}
-#container-2 > div:last-of-type{
-  
-    width : 100%;
-    height : 50%;
-    display : block;
-    background-color: blue;
-}
-
-#container-3{
-    display : inline-block;
-    border : 5px solid red;
-    width : 400px;
-    height : 200px;
-}
-
-#container-3 > div:first-of-type{
-    display : inline-block;
-    width : 50%;
-    height : 100%;
-    background-color: pink; 
-}
-#container-3 > div:last-of-type{
-    width : 50%;
-    height : 100%;
-    display : inline-block;
-    background-color: skyblue;
-}
-
-.div-4{
-    border : 3px solid black;
-=======
 
 #container-1{
     border : 3px solid black;
@@ -175,25 +81,10 @@
 
 .div-4{
     border: 3px solid black;
->>>>>>> 3d3dd4b62204ed60fa98cbc653967d769f9282fd
     height: 100px;
 }
 
 #test4{
-<<<<<<< HEAD
-    background-origin: deeppink;
-    
-    /* display : none;
-    요소는 존재하지만 화면에 보이지 않는다
-    + 영역도 차지하지 않는다. */
-
-    /* opacity:0; 요소의 가시성을 관리
-    visibility:hidden -> opacity:0 */
-
-    visibility:hidden;
-
-}
-=======
     background-color: deeppink;
 
     /* display: none; */
@@ -205,4 +96,3 @@
 
 }
 
->>>>>>> 3d3dd4b62204ed60fa98cbc653967d769f9282fd
