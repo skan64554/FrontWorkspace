@@ -15,9 +15,15 @@
         function checkBtn(){
             var cb = document.querySelectorAll("[type=checkbox]");
             $("input[type=checkbox]:checked").each(function(){
-                console.log($(this).val());
+                console.log($(this).val() + "번");
             });
-           
+
+            /*
+            var $check = $("input").filter(":checked");
+            $check.each(function(i,input){
+                console.log($(input).val() + "번");
+            })
+            */
         }
     </script>
         
@@ -35,6 +41,10 @@
         //선택한 select박스의 value값을 콘솔창에 출력
         function selectBtn(){
                 console.log($("select").val());
+
+                /*
+                    var $opitons = $("option").filter(":selected");
+                */
         }
     </script>
         

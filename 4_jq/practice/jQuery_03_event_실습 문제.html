@@ -15,8 +15,17 @@
         $(function(){
             $("select").change(function(){
                 var value = $(this).val();
-                $("#selNum").html(value);
+                $("#selNum").html(value + "번");
             })
+            //change : 옵션을 선택할 때마다
+
+            
+            // $("select[name=number]").change(function(){
+            //     if(!$(this).val()) return;
+            //     var selected = $("select[name=number] option:selected").text();
+            //     $("#selNum").html(selected);
+            // })
+            
         })
     </script>
     
@@ -61,6 +70,16 @@
             $("#s3").text(tds.eq(2).text());
             $("#s4").text(tds.eq(3).text());
         });
+        /*
+        $("#event2 tr").not(":first").on("click",function(e){
+            var $tds = $(this).children(); // this = tr태그
+
+            $tds.each(function(index, td){
+                $("#s"+(index+1)).text( $(td).text() );
+            })
+        })
+        
+        */
     });
     </script>
     
@@ -81,6 +100,18 @@
     <h2>Event 3</h2>
     <script>
     //event3번은 2번과 동일하나 선택한 행의 css만 변경되어야 합니다
+    $(function(){
+        $("#event3 tr").not(":first").on("click",function(e){
+            var $tds = $(this).children(); // this = tr태그
+
+            $(this).siblings().css('background','')
+            $(this).css('background','red');
+
+            $tds.each(function(index, td){
+                $("#s"+(index+5)).text( $(td).text() );
+            })
+        });
+    })
     </script>
 
     <table id="event3" border="1">
