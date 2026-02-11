@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<style>
+/* 공용 스타일 작성 시작*/
+div{
+    box-sizing: border-box;
+    
+}
+/* 공용 스타일 작성 끝*/
+body{
+    background-color: whitesmoke;
+}
+/* Header 스타일 작성 시작*/
+#header{
+    height : 100px;
+    display : flex;
+    flex-direction: column;
+    justify-content: end;
+
+    background-color : royalblue;
+    align-items: center;
+}
+#total-title{
+    font-size : 25px;
+    color : white;
+    font-weight : bolder;
+}
+#query{
+    margin : 10px;
+    width : 500px;
+}
+#query검색{
+    background-color : gray;
+    color : white;
+    border-style : none;
+}
+/* Header 스타일 작성 끝*/
+
+/* 상품 스타일 작성 시작*/
+p{
+    text-align : center;
+    font-size : 25px;
+    font-weight : 500;
+    margin : 18px;
+}
+#list{
+    display : flex;
+    flex-direction: row;
+}
+#list > div:nth-child(1){
+    flex-basis : 70%;
+}
+#list > div:nth-child(2){
+    flex-basis : 30%;
+    box-sizing: border-box;
+    border : 2px black;
+    box-shadow: 1px 1px 5px 1px;
+    margin-top : 20px;
+   
+}
+#booklist{
+    display : flex;
+    flex-wrap : wrap;
+    align-items: center;
+
+    justify-content : center;
+}
+
+#l{
+    display: flex;
+    flex-direction: column;
+}
+
+#book{
+    
+    flex-wrap : wrap;
+    box-sizing: border-box;
+    border : 1px black;
+    box-shadow: 1px 1px 8px 0px;
+    width : 220px;
+    height : 375px;
+
+    align-items: center;
+    
+   
+    text-align : center;
+    margin : 15px 30px;
+}
+
+#basket{
+    background-color : rgb(53, 53, 53);
+    color : white;
+    border-radius : 7%;
+    margin : 10px;
+    text-align : center;
+}
+
+#title{
+    margin-bottom : 15px;
+    display : flex;
+    text-align : center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap : wrap;
+}
+
+#totalbasket{
+    display : flex;
+    flex-direction: column;
+    background-color : white;
+    border : 1px black;
+    text-align : center;
+
+}
+/* 상품 스타일 작성 끝*/
+
+/* 장바구니 스타일 작성 시작*/
+
+/* 장바구니 스타일 작성 끝*/
+
+/* 푸터 스타일 작성 시작*/
+
+/* 푸터 스타일 작성 끝*/
+</style>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="total-title">
+                KH Shopping Mall
+            </div>
+        <span>
+            <input type="search" name="" id="query" placeholder="상품명검색">
+            <input type="submit" id="query검색" value="검색">
+        </span>
+    </div>
+    
+    
+    <div id="list">
+    
+        <div id="l">
+            <p>상품 목록</p>
+             <div id="booklist">
+            
+            <div id="book">
+                <div>
+                    <img src="./java.jpg" alt="">
+                </div>
+                <div id="title">
+                    Do it! 자바프로그래밍 입문
+                </div>
+                <div id="price">
+                    15500원
+                </div>
+                <div id="basket">
+                    장바구니담기
+                </div>
+            </div>
+           
+            <div id="book">
+                <img src="./oracle.jpg" alt="">
+                <div id="title">
+                    Do it! 오라클로 배우는 ...
+                </div>
+                <div id="price">
+                    20000원
+                </div>
+                <div id="basket">
+                    장바구니담기
+                </div>
+            </div>
+
+            <div id="book">
+                <img src="./react.jpg" alt="">
+                <div id="title">
+                    Do it! 리엑트 네이티브 앱...
+                </div>
+                <div id="price">
+                    44200원
+                </div>
+                <div id="basket">
+                    장바구니담기
+                </div>
+            </div>
+
+            <div id="book">
+                <img src="html.jpg" alt="">
+                <div id="title">
+                    Do it! HTML+CSS+자바...
+                </div>
+                <div id="price">
+                    30000원
+                </div>
+                <div id="basket">
+                    장바구니담기
+                </div>
+            </div>
+
+            <div id="book">
+                <img src="jsp.jpg" alt=""
+                width="192px" height="263px">
+                <div id="title">
+                    JSP 웹 프로그래밍과 스...
+                </div>
+                <div id="price">
+                    27000원
+                </div>
+                <div id="basket">
+                    장바구니담기
+                </div>
+            </div>
+
+            <div id="book">
+                <div>
+                <img src="react200.png" alt=""
+                width="100%" height="263px">
+                </div>
+                <div id="title">
+                    리액트 200제
+                </div>
+                <div id="price">
+                    22500원
+                </div>
+                <div id="basket">
+                    장바구니담기
+                </div>
+            </div>
+
+            <div id="book">
+                <img src="js.png" alt="">
+                <div id="title">
+                    Do it! 자바스크립트 입문...
+                </div>
+                <div id="price">
+                    16200원
+                </div>
+                <div id="basket">
+                    장바구니담기
+                </div>
+            </div>
+
+            <div id="book">
+                <img src="node.png" alt="">
+                <div id="title">
+                    Node.js 프로그래밍 입문
+                </div>
+                <div id="price">
+                    32400원
+                </div>
+                <div id="basket">
+                    장바구니담기
+                </div>
+            </div>
+        </div>
+       
+
+
+
+        </div>
+            
+
+            
+       
+        <div id="totalbasket">
+            <div>장바구니</div>
+            <div>Total : 0원</div>
+        </div>
+        
+    </div>
+
+    </div>
+    <div id="footer">
+        <p>&copy; 2024 KH Shopping Mall. All rights reserved</p>
+    </div>
+<style>
+#footer{
+    background-color: rgb(39, 39, 39);
+    color : white;
+    padding : 20px;
+    text-align : center;
+    text-decoration : none;
+}
+
+#footer > p{
+    font-size : 10px;
+    font-weight : 500;
+}
+
+</style>
+
+    
+</body>
+
+</html>
