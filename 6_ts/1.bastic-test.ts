@@ -30,11 +30,7 @@ zoo = {
 };
 
 // 3. 다음 조건에 만족하는 타입 만들기
-let response:
-    | [200, "response success"]
-    | [404, "Page not found"]
-    | [500, "server error"];
-
+let response:readonly[number,string];
 /*
 reponse 변수는 항상   다음 3 값중 한가지만을 가집니다.
 
@@ -47,21 +43,19 @@ reponse 변수는 항상   다음 3 값중 한가지만을 가집니다.
 2번 인덱스부터 새로운 값이 추가될 경우 반드시 에러를 발생시켜야 합니다.
 */
 
-
 // 4. 다음 조건에 맞는 타입 지정하기
 // array변수는 튜플이 아닙니다. 
 // array변수는 unknown[] , any[]타입이 아닙니다.
-let array:??;
+let array: (number | string | boolean | undefined | {name:string})[];
 array = [12345, 'mkm', true, undefined]; // ok
 array = ['mkm' , 12345, true]; // ok
 array.push({name : 'mkm'}); // ok
 
 // 5. 다음 조건에 맞는 타입 지정하기
 // favorite에는 치킨과 햄버거는 저장 가능하지만 그 외 어떤 값도저장할 수 없음.
-let favorite:?? = '치킨'; // ok
-favorite:?? = '햄버거'; // ok 
-favorite:?? = '피자'; // x
-favorite:?? = '짜장면'; // x
+let favorite:'치킨' | '햄버거' = '치킨'; // ok
+favorite = '햄버거'; // ok 
+
 
 // 6. 자료형 맞추기
 //Q1. test1 변수에는
@@ -70,17 +64,17 @@ favorite:?? = '짜장면'; // x
 //    1234를 넣으면 컴파일 에러가 발생합니다.
 //    true를 넣으면 컴파일 에러가 발생합니다.
 //    test1의 타입은 ?
-let test1: ???  = undefined; // ok
+let test1: string | undefined; // ok
 test1 = '1234'; // ok
-test1 = 1234; // compile error
-test1 = true; //compile error
+//test1 = 1234; // compile error
+//test1 = true; //compile error
 
 //Q2. test2 변수에는 모든 값을 담을 수 있습니다.
 //    true, 1234, undefined등을 넣어도 문제가 없습니다.
 //    test1에 test2를 담을 수 있습니다.
 //    test2는 UnionType이 아닙니다.
 //    test2의 타입은?
-let test2 : ??? = true; //ok
+let test2 : any = true; //ok
 test2 = 1234;// ok
 test1 = test2; // ok
 
@@ -88,9 +82,9 @@ test1 = test2; // ok
 //    test1에 test3를 담으면 컴파일 에러가 발생합니다.
 //    test3은 UnionType이 아닙니다.
 //    test3의 타입은?
-let test3 : ??? = undefined; // ok
+let test3 : unknown = undefined; // ok
 test3 = 1234; // ok
 test3 = true; // ok
-test1 = test3; // compile error
+//test1 = test3; // compile error
 
 export default animal;
