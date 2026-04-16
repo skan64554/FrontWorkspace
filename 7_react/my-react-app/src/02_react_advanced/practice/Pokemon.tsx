@@ -8,12 +8,12 @@ import styles from "./PokemonSearch.module.css";
 // - api사이트에서 위 데이터들이 어떤 속성에 포함되어있는지 확인 후 , 타입으로 정의하세요.
 // -front_default는 sprites -> other -> official-artwork에 추가되어 있는 이미지를 사용하세요
 interface PokemonData {
-    name: string;
+  name: string;
   height: number;
   weight: number;
-  types: string[];
-  abilities: string[];
-  image: string;
+  types: string[]; // type : {slot:number, type : {name:string, url:string}}[]
+  abilities: string[]; // ability : {is_hidden:boolean, slot:number, ability:{name:String,url:string}}[]
+  image: string; // sprites : {other:{"official-artwork" : {front_default:string}}}
 }
   
 function PokemonSearch() {
@@ -38,7 +38,10 @@ function PokemonSearch() {
 
     const res = await axios.get(
       `https://pokeapi.co/api/v2/pokemon/${query.toLowerCase()}`
-    );
+    ); 
+    // .then((result) => { setPokemon(result.data)})
+    // .catch((err) => {setError("포켓몬을 찾을 수 없습니다")})
+    // setLoading(false);
 
     const data = res.data;
 
@@ -79,6 +82,7 @@ function PokemonSearch() {
   <div className={styles.result}>
     <h3>{pokemon.name}</h3>
 
+      {/* 포켓몬 데이터 바인딩 */}
     <img
       src={pokemon.image}
       alt={pokemon.name}

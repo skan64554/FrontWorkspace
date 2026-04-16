@@ -112,6 +112,9 @@ function App() {
           <li>
             <Link to="/redux">Redux</Link>
           </li>
+          <li>
+            <Link to="/axios">포켓몬</Link>
+          </li>
         </nav>
     </>
   )
