@@ -96,7 +96,7 @@ export default function Login(){
     }
 
     const handleKakaoLogin = () => {
-        
+        window.location.href = "http://localhost:8081/api/oauth2/authorization/kakao";
     }
 
     return (
